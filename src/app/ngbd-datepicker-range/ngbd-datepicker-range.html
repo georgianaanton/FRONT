@@ -1,0 +1,16 @@
+<p>Please select the interval</p>
+
+<ngb-datepicker #dp (select)="onDateSelection($event)" [displayMonths]="2" 
+[dayTemplate]="t" outsideDays="hidden"  [dayTemplate]="t">
+</ngb-datepicker>
+
+<ng-template #t let-date let-focused="focused">
+  <span class="custom-day"
+        [class.focused]="focused"
+        [class.range]="isRange(date)"
+        [class.faded]="isHovered(date) || isInside(date)"
+        (mouseenter)="hoveredDate = date"
+        (mouseleave)="hoveredDate = null">
+    {{ date.day }}
+  </span>
+</ng-template>

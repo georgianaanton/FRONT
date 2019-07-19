@@ -1,0 +1,50 @@
+
+<form>
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-addon">
+          <i class="glyphicon glyphicon-search"></i>
+        </div>
+        <input
+          type="text"
+          class="form-control"
+          name="searchString"
+          placeholder="Type to search a name or a skill..."
+          [(ngModel)]="searchString"
+        />
+      </div>
+    </div>
+   
+   
+<br/>
+
+  <table class="table table-striped">
+    <thead>
+        <tr>
+          <th>Mentor Name</th>
+          <th>Mentor Email</th>
+          <th>Skills</th>
+          <th>Experience</th>
+          <th>No.Trainings</th>
+          <th>Fee</th>
+          <!-- <th>Action</th> -->
+        </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let mentor of formattedMentors | filter : 'formattedSkills': 'formattedName': searchString; let i = index">
+        <td>{{ mentor.formattedName}}</td>
+        <td>{{ mentor.username }}</td>
+        <td>{{ mentor.formattedSkills }}</td>
+        <td>{{ mentor.yearsOfExperience }} Years</td>
+        <td>{{ mentor.noTrainings }}</td>
+        <td>{{ mentor.fee }} </td>
+        <td>  <a [routerLink]="['/timeSlots']" class="btn btn-link">Details</a> </td>
+      </tr>
+    </tbody>
+  </table>
+
+ 
+
+</form>
+
+

@@ -1,0 +1,10 @@
+<h1>Hi {{currentUser.firstName}} {{currentUser.lastName}}!</h1>
+<div>
+<h3>The list of your current trainings</h3>
+<br/>
+<app-mytrainings></app-mytrainings>
+
+  <div><a [routerLink]="['/allTrainings']" >View All Trainings</a></div>
+
+  <div *ngIf="isMentor"><a [routerLink]="['/editSkills']" >Edit Skills</a></div>
+</div>

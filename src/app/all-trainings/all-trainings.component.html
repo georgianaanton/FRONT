@@ -1,0 +1,48 @@
+<h3>This is a list with all our trainings</h3>
+<br/>
+<div class="form-group">
+  <div class="input-group">
+    <div class="input-group-addon">
+      <i class="glyphicon glyphicon-search"></i>
+    </div>
+    <input
+      type="text"
+      class="form-control"
+      name="searchString"
+      placeholder="Type to search a training..."
+      [(ngModel)]="searchString"
+    />
+  </div>
+</div>
+
+<div>
+<div>
+  <!-- <app-mentors></app-mentors> -->
+  
+  <table class="table table-striped">
+   <thead>
+       <tr>
+         <th>Training Name</th>
+         <th>Mentor Name</th>
+         <th>Rating</th>
+         <th>Action</th>
+       </tr>
+   </thead>
+   <tbody>
+     <tr *ngFor="let training of trainings | filter : 'mentorName': 'description': searchString; let i = index">
+       <td>{{ training.description}}</td>
+       <td>{{ training.mentorName }} </td>
+       <td>
+        <span *ngFor="let star of getStarList(training)">
+          <i class="{{star}}"></i>
+        </span>
+      </td>
+       <td> <button class="btn btn-link" (click)="sendProposal(training)"> Send Proposal </button> </td>
+     </tr>
+   </tbody>
+ </table>
+ </div> 
+ <div><a [routerLink]="['/home']" >View your Trainings</a></div>
+</div>
+ 
+ 
