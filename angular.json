@@ -24,8 +24,8 @@
             ],
             "styles": [
               "src/styles.css",
-              "../angular-ui/node_modules/bootstrap/dist/css/bootstrap.css",
-              "../angular-ui/node_modules/font-awesome/css/font-awesome.css"
+              "../FRONT/node_modules/bootstrap/dist/css/bootstrap.css",
+              "../FRONT/node_modules/font-awesome/css/font-awesome.css"
             ],
             "scripts": []
           },
