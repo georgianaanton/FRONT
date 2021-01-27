@@ -24,8 +24,13 @@
             ],
             "styles": [
               "src/styles.css",
+<<<<<<< HEAD
               "node_modules/bootstrap/dist/css/bootstrap.css",
               "node_modules/font-awesome/css/font-awesome.css"
+=======
+              "../FRONT/node_modules/bootstrap/dist/css/bootstrap.css",
+              "../FRONT/node_modules/font-awesome/css/font-awesome.css"
+>>>>>>> 87c3e34c49ccfad92f805ee1683526258798593e
             ],
             "scripts": []
           },
